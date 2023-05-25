@@ -1,17 +1,17 @@
 package FigurasGeometricas;
 
 public class Triangulo extends FiguraGeometrica {
-    public Triangulo(float[] dimensoes) {
-        super(3, "Triângulo", dimensoes);
+    public Triangulo(int numLados, String nome, float[] dimensoes) {
+        super(numLados, nome, dimensoes);
     }
 
-    @Override
+    /*@Override
     public void mostrarDimensoes() {
     	for (int i = 0; i < getDimensoes().length ; i++) {
     	    System.out.println("Lado " + i+1 + ": " + getDimensoes()[i]);
     	}
 
-    }
+    }*/
         
     public float calcularArea() {
         float areaTriangulo, meioPerimetro;
