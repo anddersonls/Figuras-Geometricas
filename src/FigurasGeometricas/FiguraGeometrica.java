@@ -11,6 +11,9 @@ public abstract class FiguraGeometrica implements FiguraPlanar{
 			this.numLados = numLados;
 			this.nome = nome;
 			this.dimensoes = dimensoes;
+		}else {
+			System.err.println("Não é possível gerar uma fígura geométrica com "+ numLados +" lados!");
+			System.exit(0);
 		}
 	}
 	
@@ -47,7 +50,9 @@ public abstract class FiguraGeometrica implements FiguraPlanar{
         	System.out.print(dimensao + " ");
         }
         System.out.println();
-	}
+	} 
+	
+	public abstract float calcularArea();
 	
 	public float calcularPerimetro() {
 		float perimetro = 0.0F;

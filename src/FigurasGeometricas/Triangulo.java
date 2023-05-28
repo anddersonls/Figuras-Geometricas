@@ -4,15 +4,8 @@ public class Triangulo extends FiguraGeometrica {
     public Triangulo(int numLados, String nome, float[] dimensoes) {
         super(numLados, nome, dimensoes);
     }
-
-    /*@Override
-    public void mostrarDimensoes() {
-    	for (int i = 0; i < getDimensoes().length ; i++) {
-    	    System.out.println("Lado " + i+1 + ": " + getDimensoes()[i]);
-    	}
-
-    }*/
-        
+    
+    @Override
     public float calcularArea() {
         float areaTriangulo, meioPerimetro;
         

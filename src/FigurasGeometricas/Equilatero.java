@@ -2,8 +2,8 @@ package FigurasGeometricas;
 
 public class Equilatero extends Triangulo{
 	
-	public Equilatero(int numLados, String nome, float[] dimensoes) {
-        super(numLados, nome, dimensoes);
+	public Equilatero(int numLados, String nome, float lado) {
+		super(numLados, nome, new float[]{lado, lado, lado});
     }
 
 

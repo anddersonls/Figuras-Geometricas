@@ -4,22 +4,21 @@ import java.util.ArrayList;
 public class App {
 	public static void main(String[] args) {
 		ArrayList<FiguraGeometrica> figuras = new ArrayList<>();
-        float[] dimensoesTriangulo = {3.0f, 3.0f, 3.0f};
+        float[] dimensoesTriangulo = {2.0f, 3.0f, 4.0f};
         float[] dimensoesQuadrado = {5.0f, 5.0f, 5.0f};
 		
-		figuras.add(new Equilatero(3, "Equilatero", dimensoesTriangulo));
+		figuras.add(new Equilatero(3, "Equilatero", 5.0F));
         figuras.add(new Isosceles(3, "Isosceles", dimensoesTriangulo));
         figuras.add(new Escaleno(3, "Escaleno", dimensoesTriangulo));
-        figuras.add(new Quadrado(4, "Quadrado", dimensoesQuadrado));
+        figuras.add(new Quadrado(4, "Quadrado", 8.0f));
         figuras.add(new Retangulo(4, "Quadrado", dimensoesQuadrado));
-
-        for (FiguraGeometrica figura : figuras) {
-            figura.mostrarDimensoes();
-            System.out.println(); // Adiciona uma linha em branco para separar as figuras
+        
+        for(FiguraGeometrica item: figuras) {
+        	System.out.println(item.getNome());
         }
         
-        Equilatero equilatero = new Equilatero(3, "Roger", dimensoesTriangulo);
-        Quadrilatero quadrado = new Quadrado(4, "Vitor", dimensoesQuadrado);
+        Equilatero equilatero = new Equilatero(3, "Roger", 5.0F);
+        Quadrilatero quadrado = new Quadrado(4, "Vitor", 8.0F);
         
         compararPerimetro(equilatero, quadrado);
         compararArea(equilatero, quadrado);
@@ -36,7 +35,7 @@ public class App {
         } else if (perimetroFigura1 < perimetroFigura2) {
             System.out.println(f2.getNome() + " possui um perímetro maior que " + f1.getNome() + "!");
         } else {
-            System.out.println("As figuras possuem perímetros iguais");
+            System.out.println("As figuras possuem perímetros iguais!");
         }
 
 	}
@@ -45,7 +44,6 @@ public class App {
 		float areaFigura1 = f1.calcularArea();
         float areaFigura2 = f2.calcularArea();
         
-        
         System.out.println("Área de " + f1.getNome() + ": " + areaFigura1);
         System.out.println("Área de " + f2.getNome() + ": " + areaFigura2);
         if (areaFigura1 > areaFigura2) {
@@ -53,7 +51,7 @@ public class App {
         } else if (areaFigura1 < areaFigura2) {
             System.out.println(f2.getNome() + " possui uma area maior que " + f1.getNome() + "!");
         } else {
-            System.out.println("As figuras possuem perímetros iguais");
+            System.out.println("As figuras possuem perímetros iguais!");
         }
 
 	}
