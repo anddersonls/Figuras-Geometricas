@@ -3,6 +3,14 @@ package FigurasGeometricas;
 public class Triangulo extends FiguraGeometrica {
     public Triangulo(int numLados, String nome, float[] dimensoes) {
         super(numLados, nome, dimensoes);
+        if(numLados!=3) { 
+        	System.err.println("Não é possível gerar um triangulo de " + numLados + " lados!");
+			System.exit(0);
+        }else if(dimensoes[0]+dimensoes[1]<=dimensoes[2] || dimensoes[0]+dimensoes[2]<=dimensoes[1] 
+        		|| dimensoes[1]+dimensoes[2]<=dimensoes[0]) {
+        	System.err.println("Não é possível gerar um triangulo com as dimensões dadas!");
+			System.exit(0);
+        }
     }
     
     @Override

@@ -4,18 +4,20 @@ import java.util.ArrayList;
 public class App {
 	public static void main(String[] args) {
 		ArrayList<FiguraGeometrica> figuras = new ArrayList<>();
-        float[] dimensoesTriangulo = {2.0f, 3.0f, 4.0f};
-        float[] dimensoesQuadrado = {5.0f, 5.0f, 5.0f};
+        float[] dimensoesIsosceles = {3.0f, 3.0f, 4.0f};
+        float[] dimensoesEscaleno = {2.0f, 3.0f, 4.0f};
+        float[] dimensoesRetangulo = {5.0f, 2.0f, 5.0f, 2.0f};
 		
 		figuras.add(new Equilatero(3, "Equilatero", 5.0F));
-        figuras.add(new Isosceles(3, "Isosceles", dimensoesTriangulo));
-        figuras.add(new Escaleno(3, "Escaleno", dimensoesTriangulo));
+        figuras.add(new Isosceles(3, "Isosceles", dimensoesIsosceles));
+        figuras.add(new Escaleno(3, "Escaleno", dimensoesEscaleno));
         figuras.add(new Quadrado(4, "Quadrado", 8.0f));
-        figuras.add(new Retangulo(4, "Quadrado", dimensoesQuadrado));
+        figuras.add(new Retangulo(4, "Quadrado", dimensoesRetangulo));
         
         for(FiguraGeometrica item: figuras) {
         	System.out.println(item.getNome());
         }
+        System.out.println();
         
         Equilatero equilatero = new Equilatero(3, "Roger", 5.0F);
         Quadrilatero quadrado = new Quadrado(4, "Vitor", 8.0F);
@@ -37,7 +39,7 @@ public class App {
         } else {
             System.out.println("As figuras possuem perímetros iguais!");
         }
-
+        System.out.println();
 	}
 	
 	public static void compararArea(FiguraGeometrica f1, FiguraGeometrica f2) {
@@ -53,7 +55,7 @@ public class App {
         } else {
             System.out.println("As figuras possuem perímetros iguais!");
         }
-
+        System.out.println();
 	}
 
 }
